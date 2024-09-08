@@ -20,3 +20,25 @@ categories = [ "Electronics", "Clothing", "Books", "Home & Garden", "Toys" ]
 end
 
 puts "Created #{Product.count} products"
+
+# Create admin user
+User.create!(
+  name: 'Admin User',
+  email: 'admin@example.com',
+  password: 'password',
+  password_confirmation: 'password',
+  role: 'admin'
+)
+
+# Create regular users
+10.times do
+  User.create!(
+    name: Faker::Name.name,
+    email: Faker::Internet.unique.email,
+    password: 'password',
+    password_confirmation: 'password',
+    role: 'user'
+  )
+end
+
+puts "Created #{User.count} users"
