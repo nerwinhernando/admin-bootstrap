@@ -1,0 +1,7 @@
+<% content_for :breadcrumbs do %>
+  <li class="breadcrumb-item"><%= link_to 'Users', admin_users_path %></li>
+  <li class="breadcrumb-item active" aria-current="page"><%= @user.name %></li>
+<% end %>
+
+<h1>User Details</h1>
+<!-- Add user details here -->
