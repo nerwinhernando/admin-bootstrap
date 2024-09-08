@@ -1,0 +1,13 @@
+<% breadcrumb(
+     {text: 'Dashboard', path: admin_root_path},
+     {text: 'Users', path: admin_users_path},
+     'New User'
+   ) %>
+
+<div class="container mt-4">
+  <h1 class="mb-4">New User</h1>
+
+  <%= render 'form', user: @user %>
+
+  <%= link_to 'Back to Users', admin_users_path, class: 'btn btn-secondary mt-3' %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_08_213751) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_08_215223) do
   create_table "products", force: :cascade do |t|
     t.string "name", null: false
     t.text "description"
@@ -21,5 +21,15 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_08_213751) do
     t.datetime "updated_at", null: false
     t.index ["category"], name: "index_products_on_category"
     t.index ["name"], name: "index_products_on_name"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.string "role", default: "user"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 end
