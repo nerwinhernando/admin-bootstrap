@@ -9,19 +9,24 @@
     <%#= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <div class="container-fluid">
-      <div class="row">
+  <body class="d-flex flex-column h-100">
+    <div class="container-fluid flex-grow-1">
+      <div class="row h-100">
         <!-- Sidebar partial -->
         <%= render 'shared/admin_sidebar' %>
 
         <!-- Main content -->
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 d-flex flex-column">
           <!-- Navigation bar partial -->
           <%= render 'shared/admin_navbar' %>
 
           <!-- Page content -->
-          <%= yield %>
+          <div class="flex-grow-1">
+            <%= yield %>
+          </div>
+
+          <!-- Footer partial -->
+          <%= render 'shared/admin_footer' %>
         </main>
       </div>
     </div>

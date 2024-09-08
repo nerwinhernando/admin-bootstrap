@@ -1,5 +1,5 @@
 class Admin::ProductsController < ApplicationController
-  layout 'admin'
+  layout "admin"
 
   def index
     # Add logic to list users
