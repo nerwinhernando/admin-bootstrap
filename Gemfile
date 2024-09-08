@@ -51,3 +51,5 @@ end
 
 gem "bootstrap", "~> 5.3.0"
 gem "sassc-rails"
+
+gem "kaminari", "~> 1.2"
