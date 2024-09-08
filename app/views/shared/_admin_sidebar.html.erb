@@ -16,7 +16,11 @@
           Products
         </a>
       </li>
-      <!-- Add more sidebar menu items as needed -->
+      <li class="nav-item">
+        <a class="nav-link <%= 'active' if current_page?(admin_settings_path) %>" href="<%= admin_settings_path %>">
+          Settings
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
