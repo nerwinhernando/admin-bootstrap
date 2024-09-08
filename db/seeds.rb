@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-categories = ['Electronics', 'Clothing', 'Books', 'Home & Garden', 'Toys']
+categories = [ "Electronics", "Clothing", "Books", "Home & Garden", "Toys" ]
 
 100.times do
   Product.create!(
