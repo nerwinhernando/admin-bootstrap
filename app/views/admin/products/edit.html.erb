@@ -1,0 +1,14 @@
+<%= breadcrumb(
+  {text: 'Dashboard', path: admin_root_path},
+  {text: 'Products', path: admin_products_path},
+  "Edit #{@product.name}"
+) %>
+
+<div class="container mt-4">
+  <h1 class="mb-4">Edit Product</h1>
+
+  <%= render 'form', product: @product %>
+
+  <%= link_to 'Show', admin_product_path(@product), class: 'btn btn-info mt-3' %>
+  <%= link_to 'Back to Products', admin_products_path, class: 'btn btn-secondary mt-3' %>
+</div>
