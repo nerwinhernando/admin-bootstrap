@@ -1,0 +1,22 @@
+<nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+  <div class="position-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link <%= 'active' if current_page?(admin_root_path) %>" href="<%= admin_root_path %>">
+          Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <%= 'active' if current_page?(admin_users_path) %>" href="<%= admin_users_path %>">
+          Users
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <%= 'active' if current_page?(admin_products_path) %>" href="<%= admin_products_path %>">
+          Products
+        </a>
+      </li>
+      <!-- Add more sidebar menu items as needed -->
+    </ul>
+  </div>
+</nav>
