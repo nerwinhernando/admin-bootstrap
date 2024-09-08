@@ -7,3 +7,16 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+categories = ['Electronics', 'Clothing', 'Books', 'Home & Garden', 'Toys']
+
+100.times do
+  Product.create!(
+    name: Faker::Commerce.product_name,
+    description: Faker::Lorem.paragraph(sentence_count: 3),
+    price: Faker::Commerce.price(range: 0..1000.0),
+    stock: Faker::Number.between(from: 0, to: 100),
+    category: categories.sample
+  )
+end
+
+puts "Created #{Product.count} products"
