@@ -54,6 +54,6 @@ gem "sassc-rails"
 
 gem "kaminari", "~> 1.2"
 
-gem "faker", "~> 3.4"
+gem "faker", "~> 3.5"
 
 gem "bcrypt", "~> 3.1"
